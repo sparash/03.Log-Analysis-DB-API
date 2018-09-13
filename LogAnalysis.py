@@ -2,7 +2,6 @@
 import psycopg2
 DBNAME = "news"
 
-
 query1 = """
         SELECT title, views
         FROM articles,
@@ -44,9 +43,6 @@ query3 = """
         WHERE (ROUND(((errors.err_req*1.0) / final.requests), 2) > 0.01)
         ORDER BY percent DESC;
     """
-
-
-
 
 def operations(statement):
     db = psycopg2.connect(database=DBNAME)
