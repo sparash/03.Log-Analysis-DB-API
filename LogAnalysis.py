@@ -44,6 +44,7 @@ query3 = """
         ORDER BY percent DESC;
     """
 
+
 def operations(statement):
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
